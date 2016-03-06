@@ -1,0 +1,84 @@
+
+.word-form {
+  height: 320px;
+  position: relative;
+}
+
+.word-input {
+  height: 35px;
+  input {
+    opacity: .3;
+    position: absolute;
+  }
+
+}
+
+.lifes {
+  height: 1.5em;
+}
+
+.life {
+  display: inline-block;
+  background-color: $brand-success;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.meta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.scrambled-word {
+  display: flex;
+  transition: all .8s ease;
+  position: absolute;
+  width: 100%;
+
+  .char {
+    transition: all .3s ease;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 40px;
+    font-weight: bold;
+    color: $brand-warning;
+    transform: translateY(100px);
+  }
+
+  @for $i from 1 through 12 {
+    .char-highlight.char-pos-#{$i} {
+      order: $i;
+    }
+  }
+
+  .char-highlight {
+    transform: translateY(20px);
+    font-size: 60px;
+    padding-top: 0;
+    color: $brand-success;
+  }
+}
+
+.word-enter {
+  opacity: 0.01;
+}
+
+.word-enter.word-enter-active {
+  opacity: 1;
+}
+
+.word-leave {
+  opacity: 1;
+}
+
+.word-leave.word-leave-active {
+  opacity: 0.01;
+  transform: translateY(-200px);
+}
