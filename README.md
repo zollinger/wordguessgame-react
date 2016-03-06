@@ -1,26 +1,13 @@
-# Web app
-
-Reasonable starting point for building a web app.
-
-## Features
-
-* Heavily commented webpack configuration with reasonable defaults
-* JSX, ES6, and ES7 support with babel.js
-* CSS Modules
-* Source maps included in all builds
-* Development server with hot reload when possible and refresh otherwise
-* Production builds with cache busting and asset minification
-* Testing environment using karma to run tests and mocha as the framework
-* Code coverage when tests are run
-* No gulp and no grunt, just npm run-scripts
+# A simple word guessing game in React/Redux
 
 ## Installation
 
-Install [node](http://nodejs.org/), my favored approach is using [Node Version Manager](https://github.com/creationix/nvm).
 
-Clone the repo and change `origin` git remote.
+To use it, just clone this repo and install the npm dependencies:
 
 ```shell
+$ git clone https://github.com/zollinger/wordguessgame-react
+$ cd wordguessgame-react
 $ npm install
 ```
 
@@ -28,17 +15,14 @@ $ npm install
 
 All scripts are run with `npm run [script]`, for example: `npm run test`.
 
-* `build` - generate a minified build to public folder
+* `build` - generate a minified build to dist folder
 * `dev` - start development server, try it by opening `http://localhost:8080/`
-* `lint` - lint the project using [standard](https://github.com/feross/standard)
-* `test` - lint and run all tests
-* `test:unit` - run all unit tests
-* `tdd` - continuously run unit tests watching for changes
+* `test` - run all tests
+* `test:live` - continuously run unit tests watching for changes
 
 See what each script does by looking at the `scripts` section in [package.json](./package.json).
 
-**NOTE:** to generate a full production build you must run the build command with `NODE_ENV=production`.
 
-## Linting
+## Credits
 
-Use [standard](https://github.com/feross/standard) for linting. It has [editor plugins](https://github.com/feross/standard#editor-plugins).
+Webpack configuration based on [Angular Webpack Workflow](https://github.com/Foxandxss/angular-webpack-workflow)
